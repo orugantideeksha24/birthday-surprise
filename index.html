@@ -12,10 +12,7 @@
 
     <title>Happy Birthday Bestie ❤️</title>
 
-
-    <!-- =================================================
-         GOOGLE FONTS
-    ================================================== -->
+    <!-- GOOGLE FONTS -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -30,7 +27,6 @@
         rel="stylesheet"
     >
 
-
 <style>
 
 /* =====================================================
@@ -40,21 +36,13 @@
 :root {
 
     --dark: #100002;
-
     --deep: #190003;
-
     --burgundy: #350006;
-
     --cherry: #650012;
-
     --red: #9e0025;
-
     --bright-red: #e5093f;
-
     --pink: #ff5c7d;
-
     --light-pink: #ffc1cc;
-
     --white: #fff7f8;
 }
 
@@ -64,17 +52,13 @@
 ===================================================== */
 
 * {
-
     margin: 0;
-
     padding: 0;
-
     box-sizing: border-box;
 }
 
 
 html {
-
     scroll-behavior: smooth;
 }
 
@@ -112,7 +96,6 @@ body {
 
 /* =====================================================
    CONTINUOUS BACKGROUND
-   STARTS IMMEDIATELY
 ===================================================== */
 
 #background {
@@ -258,7 +241,6 @@ body {
     }
 
     10% {
-
         opacity: .8;
     }
 
@@ -499,7 +481,6 @@ body {
 
 
 #dobInput::placeholder {
-
     color: #b87983;
 }
 
@@ -664,7 +645,7 @@ body {
 
 /* =====================================================
    HAPPY BIRTHDAY
-   SMALL + STRAIGHT LINE
+   ⭐ GLOWING WHITE COLOR
 ===================================================== */
 
 .hero h1 {
@@ -672,11 +653,6 @@ body {
     font-family:
         "Playfair Display",
         serif;
-
-    /*
-       IMPORTANT:
-       Small enough so Y will not be cut.
-    */
 
     font-size:
         clamp(36px, 6vw, 78px);
@@ -697,24 +673,23 @@ body {
 
     margin: 0 auto;
 
-    background:
+    /* PURE GLOWING WHITE */
 
-        linear-gradient(
-            180deg,
-            #ffffff,
-            #ffc4cf 48%,
-            #e5093f
-        );
+    color: #ffffff;
 
-    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
 
-    -webkit-text-fill-color: transparent;
+    text-shadow:
 
-    filter:
-        drop-shadow(
-            0 0 16px
-            rgba(229, 9, 63, .45)
-        );
+        0 0 5px rgba(255,255,255,.9),
+
+        0 0 12px rgba(255,255,255,.8),
+
+        0 0 25px rgba(255,255,255,.65),
+
+        0 0 45px rgba(255,70,100,.55),
+
+        0 0 70px rgba(229,9,63,.4);
 
     animation:
 
@@ -756,25 +731,41 @@ body {
 }
 
 
+/* =====================================================
+   WHITE GLOW ANIMATION
+===================================================== */
+
 @keyframes birthdayGlow {
 
     0%,
     100% {
 
-        filter:
-            drop-shadow(
-                0 0 10px
-                rgba(229, 9, 63, .35)
-            );
+        text-shadow:
+
+            0 0 5px rgba(255,255,255,.8),
+
+            0 0 12px rgba(255,255,255,.7),
+
+            0 0 25px rgba(255,255,255,.55),
+
+            0 0 40px rgba(255,70,100,.4),
+
+            0 0 60px rgba(229,9,63,.25);
     }
 
     50% {
 
-        filter:
-            drop-shadow(
-                0 0 27px
-                rgba(229, 9, 63, .75)
-            );
+        text-shadow:
+
+            0 0 8px #ffffff,
+
+            0 0 18px #ffffff,
+
+            0 0 32px rgba(255,255,255,.9),
+
+            0 0 55px rgba(255,80,110,.7),
+
+            0 0 85px rgba(229,9,63,.5);
     }
 }
 
@@ -1014,12 +1005,10 @@ body {
 
     0%,
     100% {
-
         opacity: .4;
     }
 
     50% {
-
         opacity: 1;
     }
 }
@@ -1053,6 +1042,10 @@ section {
     text-align: center;
 }
 
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
 
 .sectionTitle {
 
@@ -1094,11 +1087,6 @@ section {
 .gallery {
 
     display: grid;
-
-    /*
-       EXACTLY 4 COLUMNS
-       = 4 x 2 = 8 photos
-    */
 
     grid-template-columns:
         repeat(4, 1fr);
@@ -1269,7 +1257,9 @@ section {
 }
 
 
-/* Soft glow overlay */
+/* =====================================================
+   SOFT GLOW OVERLAY
+===================================================== */
 
 .photo::after {
 
@@ -1859,7 +1849,7 @@ section {
 
 
 /* =====================================================
-   HEART POP WHEN CLICKING BIG HEART
+   HEART POP
 ===================================================== */
 
 .heartPop {
@@ -1959,7 +1949,6 @@ section {
     }
 
     10% {
-
         opacity: 1;
     }
 
@@ -2014,12 +2003,6 @@ section {
             30px 15px;
     }
 
-
-    /*
-       Happy Birthday remains
-       ONE straight line.
-    */
-
     .hero h1 {
 
         font-size:
@@ -2031,7 +2014,6 @@ section {
         letter-spacing: 0;
     }
 
-
     .bestie {
 
         font-size:
@@ -2039,7 +2021,6 @@ section {
 
         margin-top: 12px;
     }
-
 
     .heroSubtitle {
 
@@ -2049,21 +2030,16 @@ section {
             0 15px;
     }
 
-
     .heartArea {
 
         margin-top: 38px;
     }
-
 
     section {
 
         padding:
             80px 18px;
     }
-
-
-    /* 8 photos = 2 columns x 4 rows */
 
     .gallery {
 
@@ -2073,14 +2049,12 @@ section {
         gap: 12px;
     }
 
-
     .photo {
 
         border-radius: 16px;
 
         padding: 4px;
     }
-
 
     .photo img {
 
@@ -2089,7 +2063,6 @@ section {
         border-radius: 12px;
     }
 
-
     .photo:hover {
 
         transform:
@@ -2097,13 +2070,11 @@ section {
             scale(1.02);
     }
 
-
     .photo:hover img {
 
         transform:
             scale(1.025);
     }
-
 
     .specialBox p {
 
@@ -2111,7 +2082,6 @@ section {
 
         line-height: 1.7;
     }
-
 
     .loveText {
 
@@ -2131,12 +2101,10 @@ section {
         font-size: 25px;
     }
 
-
     .bestie {
 
         font-size: 40px;
     }
-
 
     .photo img {
 
@@ -2145,6 +2113,7 @@ section {
 }
 
 </style>
+
 </head>
 
 
@@ -2178,16 +2147,13 @@ section {
             ❤️
         </div>
 
-
         <h2>
             A Little Surprise
         </h2>
 
-
         <p>
             Enter the special date to unlock your surprise.
         </p>
-
 
         <input
             type="text"
@@ -2196,14 +2162,12 @@ section {
             maxlength="10"
         >
 
-
         <button
             class="openBtn"
             onclick="checkDOB()"
         >
             Open My Surprise ❤️
         </button>
-
 
         <div id="error">
             That's not the secret date... ❤️
@@ -2229,20 +2193,15 @@ section {
 
         <div class="heroContent">
 
-
             <div class="heroSmall">
                 ✦ TODAY IS YOUR SPECIAL DAY ✦
             </div>
 
 
-            <!-- ONE STRAIGHT LINE -->
-
             <h1>
                 Happy Birthday
             </h1>
 
-
-            <!-- BELOW HAPPY BIRTHDAY -->
 
             <div class="bestie">
                 Bestie
@@ -2254,8 +2213,6 @@ section {
             </p>
 
 
-            <!-- BIG HEART -->
-
             <div class="heartArea">
 
                 <button
@@ -2265,7 +2222,6 @@ section {
                 >
                     ❤️
                 </button>
-
 
                 <div class="tapText">
                     TAP THE HEART
@@ -2286,16 +2242,12 @@ section {
 
         <div class="container">
 
-
             <h2 class="sectionTitle">
                 Our <span>Memories</span> ❤️
             </h2>
 
 
             <div class="gallery">
-
-
-                <!-- PHOTO 1 -->
 
                 <div class="photo">
 
@@ -2307,8 +2259,6 @@ section {
                 </div>
 
 
-                <!-- PHOTO 2 -->
-
                 <div class="photo">
 
                     <img
@@ -2318,8 +2268,6 @@ section {
 
                 </div>
 
-
-                <!-- PHOTO 3 -->
 
                 <div class="photo">
 
@@ -2331,8 +2279,6 @@ section {
                 </div>
 
 
-                <!-- PHOTO 4 -->
-
                 <div class="photo">
 
                     <img
@@ -2342,8 +2288,6 @@ section {
 
                 </div>
 
-
-                <!-- PHOTO 5 -->
 
                 <div class="photo">
 
@@ -2355,8 +2299,6 @@ section {
                 </div>
 
 
-                <!-- PHOTO 6 -->
-
                 <div class="photo">
 
                     <img
@@ -2366,8 +2308,6 @@ section {
 
                 </div>
 
-
-                <!-- PHOTO 7 -->
 
                 <div class="photo">
 
@@ -2379,8 +2319,6 @@ section {
                 </div>
 
 
-                <!-- PHOTO 8 -->
-
                 <div class="photo">
 
                     <img
@@ -2389,7 +2327,6 @@ section {
                     >
 
                 </div>
-
 
             </div>
 
@@ -2406,14 +2343,12 @@ section {
 
         <div class="container">
 
-
             <h2 class="sectionTitle">
                 Something <span>Special</span> ❤️
             </h2>
 
 
             <div class="specialBox">
-
 
                 <div class="specialHeart">
                     ❤️
@@ -2433,7 +2368,13 @@ section {
                     smile, beautiful memories to keep, dreams
                     that come true and all the happiness you
                     deserve. Never stop being the wonderful
-                    person you are, and Never forget that you are genuinely cared for, deeply loved, and truly valued. <br> Happy Birthday, Bestie. ❤️
+                    person you are, and Never forget that you are
+                    genuinely cared for, deeply loved, and truly
+                    valued.
+
+                    <br>
+
+                    Happy Birthday, Bestie. ❤️
 
                 </p>
 
@@ -2452,7 +2393,6 @@ section {
 
         <div class="container">
 
-
             <div class="giftHeading">
                 One last little surprise... 🎁
             </div>
@@ -2466,7 +2406,6 @@ section {
                 onclick="openGift()"
             >
 
-
                 <div class="bow bowLeft"></div>
 
                 <div class="bow bowRight"></div>
@@ -2479,16 +2418,12 @@ section {
 
                 <div class="ribbonHorizontal"></div>
 
-
             </div>
 
 
-            <!-- =================================================
-                 FINAL REVEAL
-            ================================================== -->
+            <!-- FINAL REVEAL -->
 
             <div id="finalReveal">
-
 
                 <img
                     src="bestie.jpg"
@@ -2496,14 +2431,11 @@ section {
                     class="finalPhoto"
                 >
 
-
                 <div class="loveText">
                     I Love You ❤️
                 </div>
 
-
             </div>
-
 
         </div>
 
@@ -2517,7 +2449,6 @@ section {
 
 /* =====================================================
    CONTINUOUS FLOATING HEARTS
-   STARTS AS SOON AS PAGE OPENS
 ===================================================== */
 
 const background =
@@ -2529,35 +2460,27 @@ function createHeart() {
     const heart =
         document.createElement("div");
 
-
     heart.className =
         "floating-heart";
-
 
     heart.innerHTML =
         Math.random() > .5
             ? "♥"
             : "♡";
 
-
     heart.style.left =
         Math.random() * 100 + "%";
-
 
     heart.style.fontSize =
         (14 + Math.random() * 30) + "px";
 
-
     heart.style.animationDuration =
         (7 + Math.random() * 8) + "s";
-
 
     heart.style.animationDelay =
         Math.random() * 2 + "s";
 
-
     background.appendChild(heart);
-
 
     setTimeout(() => {
 
@@ -2595,25 +2518,19 @@ function createSparkle() {
     const sparkle =
         document.createElement("div");
 
-
     sparkle.className =
         "sparkle";
-
 
     sparkle.style.left =
         Math.random() * 100 + "%";
 
-
     sparkle.style.top =
         Math.random() * 100 + "%";
-
 
     sparkle.style.animationDelay =
         Math.random() * 2 + "s";
 
-
     background.appendChild(sparkle);
-
 
     setTimeout(() => {
 
@@ -2649,17 +2566,14 @@ function checkDOB() {
     const input =
         document.getElementById("dobInput");
 
-
     const error =
         document.getElementById("error");
-
 
     const entered =
         input.value.trim();
 
 
     if(entered === "24-01-2007") {
-
 
         error.style.display =
             "none";
@@ -2672,7 +2586,6 @@ function checkDOB() {
 
 
         setTimeout(() => {
-
 
             document
                 .getElementById("dobScreen")
@@ -2691,13 +2604,11 @@ function checkDOB() {
                 0
             );
 
-
         }, 700);
 
     }
 
     else {
-
 
         error.style.display =
             "block";
@@ -2742,28 +2653,19 @@ document
 
 function openHeart() {
 
-
-    /* Create large heart pop */
-
     const pop =
         document.createElement("div");
-
 
     pop.className =
         "heartPop";
 
-
     pop.innerHTML =
         "❤️";
-
 
     document.body.appendChild(pop);
 
 
-    /* Scroll after heart animation starts */
-
     setTimeout(() => {
-
 
         document
             .getElementById("memories")
@@ -2771,11 +2673,8 @@ function openHeart() {
                 behavior: "smooth"
             });
 
-
     }, 550);
 
-
-    /* Remove pop */
 
     setTimeout(() => {
 
@@ -2791,25 +2690,20 @@ function openHeart() {
 
 function openGift() {
 
-
     const gift =
         document.getElementById("gift");
-
 
     gift.classList.add("open");
 
 
     setTimeout(() => {
 
-
         document
             .getElementById("finalReveal")
             .style.display =
             "block";
 
-
         createFinalHearts();
-
 
     }, 750);
 }
@@ -2821,38 +2715,29 @@ function openGift() {
 
 function createFinalHearts() {
 
-
     for(let i = 0; i < 35; i++) {
 
-
         setTimeout(() => {
-
 
             const heart =
                 document.createElement("div");
 
-
             heart.className =
                 "finalHeart";
-
 
             heart.innerHTML =
                 Math.random() > .3
                     ? "❤️"
                     : "♡";
 
-
             heart.style.left =
                 Math.random() * 100 + "%";
-
 
             heart.style.fontSize =
                 (15 + Math.random() * 30) + "px";
 
-
             heart.style.animationDuration =
                 (4 + Math.random() * 5) + "s";
-
 
             document.body.appendChild(heart);
 
@@ -2862,7 +2747,6 @@ function createFinalHearts() {
                 heart.remove();
 
             }, 9000);
-
 
         }, i * 130);
 
